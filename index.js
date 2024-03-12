@@ -82,8 +82,9 @@ function animaster() {
 
         moveAndHide (element, duration) {
             this.move(element, 2 * (duration/5), {x: 100, y:20});
-            this.fadeIn(element, 3 * (duration/5));
-            alert('a')
+            setTimeout(() => {
+                this.fadeOut(element, 3 * (duration/5));
+            }, 2 * (duration/5));
         }
 
     };
